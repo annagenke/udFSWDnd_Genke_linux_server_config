@@ -2,8 +2,8 @@
 Below are the server configuration steps for project 5 of the 
 Full Stack Web Development Nanodegree.
 #### Details
-* IP address: 3.82.136.161
-* http://3.82.136.161.xip.io/
+* IP address: 54.167.166.145
+* http://54.167.166.145.xip.io/
 * ssh port: 2200
 ### getting a lightsail instance
 1. Go to [Amazon Lightsail](https://lightsail.aws.amazon.com/ls/webapp/home/instances) and create an account.
@@ -18,7 +18,7 @@ Full Stack Web Development Nanodegree.
 2. create a file called `lightsail_rsa` under you `~/.ssh directory`. 
 3. put the key from your downloaded .pem file into your new `lightsail_rsa` file
 4. $ chmod 600 ~/.ssh/lightsail_key.rsa to set the permission to owner only.
-5. SSH into the instance:  `ssh -i ~/.ssh/lightsail_rsa ubuntu@3.82.136.161`
+5. SSH into the instance:  `ssh -i ~/.ssh/lightsail_rsa ubuntu@54.167.166.145`
 
 
 ### create grader user
@@ -71,7 +71,7 @@ The time zone is saved in /etc/timezone
 ### Install and configure Apache to serve a Python mod_wsgi application
 * `sudo apt install apache2`
 
-If installed correctly, going to 3.82.136.161 on a wed browser 
+If installed correctly, going to 54.167.166.145 on a wed browser 
 will show the ubuntu apache default page
 
 Install mod-wsgi:
@@ -145,8 +145,8 @@ source venv/bin/activate
 2. add the following:
     ```    
     <VirtualHost *:80>
-                    ServerName 3.82.136.161
-                    ServerAdmin ubuntu@3.82.136.161
+                    ServerName 54.167.166.145
+                    ServerAdmin ubuntu@54.167.166.145
                     WSGIScriptAlias / /var/www/catalog/catalog.wsgi
                     <Directory /var/www/catalog/catalog/>
                             Order allow,deny
@@ -168,13 +168,13 @@ source venv/bin/activate
 ### Modify google oauth
 1. Add 'xip.io' to you Authorized Domains
 
-2. In Authorized Javascript add `http://3.82.136.161.xip.io/`
+2. In Authorized Javascript add `http://54.167.166.145.xip.io`
 
 3. In Authorized Redirect Urls add:
     ```
-      http://3.82.136.161.xip.io/gconnect	
-      http://3.82.136.161.xip.io/oauth2callback	
-      http://3.82.136.161.xip.io/login
+      http://54.167.166.145.xip.io/gconnect	
+      http://54.167.166.145.xip.io/oauth2callback	
+      http://54.167.166.145.xip.io/login
     ```
 ---
 ##### tips
